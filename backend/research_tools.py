@@ -1,12 +1,16 @@
 from groq import Groq
 import json
+import os
 import requests
 import pymupdf4llm as p4llm
 
-with open(".conf", "r") as file:
-    config = json.load(file)
-    groq_api_key = config["GROQ_API_KEY"]
-    perplexity_api_key = config["PERPLEXITY_API_KEY"]
+# with open(".conf", "r") as file:
+#     config = json.load(file)
+#     groq_api_key = config["GROQ_API_KEY"]
+#     perplexity_api_key = config["PERPLEXITY_API_KEY"]
+
+groq_api_key = os.environ.get("GROQ_API_KEY")
+perplexity_api_key = os.environ.get("PERPLEXITY_API_KEY")
 
 client = Groq(
     api_key=groq_api_key,
