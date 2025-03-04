@@ -4,34 +4,50 @@ Studying complex topics can be overwhelming, especially when faced with dense te
 
 ![lailani_thumbnail](imgs/lailani_thumbnail.jpg)
 
-# Technologies We Used
+## Technologies We Used
 
 We used React as a front end, and Flask for the backend. Our main logic for gathering information and communicating with the API's were done using Python. We used Perplexity AI and their sonar and sonar-deep-research models for our Research and Deep Research functionality, while incorporating Groq's quick AI inference for notes file ingest, as well as collecting topics for generating flashcards. 
 
-# Core Features
+## Core Features
 
 - Smart File Upload
 - Upload PDFs, DOCs, TXTs, and Markdown files
 - AI scans the file and extracts important topics automatically
 
-# Design
+## Design
 
 Below are the design principles that guided our Lailani visuals.
 
 ![lailani_thumbnail](imgs/lailani_Design_Principles.jpg)
 
-# Flashcard Generation
+## Flashcard Generation
 
 - Groq AI instantly creates flashcards based on uploaded content
 - Flashcards cover key points, definitions, and questions
 
-# AI-Powered Research
+## AI-Powered Research
 
 - Research Mode: Uses Perplexity AI for AI-driven explanations
 - Deep Research Mode: Provides in-depth analysis with Sonar Deep Research
 
-# Contributors
+## Contributors
 - Nikola Paunovic - Back-end developer
 - Rowwel Ponesto - Back-end developer
 - Patrick Gatpandan - Front-end developer
 - Xiaojun Gong - Front-end developer
+
+## How to build?
+
+Setup:
+
+1. `python -m venv env` and `source env/bin/activate`
+2. `pip install -r requirements.txt`
+3. `cd frontend` and `npm install` (node 18 is used: `nvm install 18` and `nvm use 18`)
+4. Add Perplexity and Groq key: `export PERPLEXITY_API_KEY=xxx` and `export GROQ_API_KEY=xxx`
+
+
+
+To run:
+
+1. To start frontend: `npm start`
+2. To start backend: `python backend/main.py`
